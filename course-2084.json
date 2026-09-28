@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2084,
   "repository": "LearningOS/2026a-rustling-by-time",
-  "commit": "e42be10b54be34dd17b0582f3ba8dc3630c7bede",
-  "score": 109,
+  "commit": "8d4f93ff0ad196b112eaf149db8e6af10d4b5d4e",
+  "score": 110,
   "totalScore": 110,
   "exercises": [
     {
@@ -331,8 +331,8 @@
     {
       "name": "quiz2",
       "max": 1,
-      "score": 0,
-      "status": "fail",
+      "score": 1,
+      "status": "pass",
       "exitCode": 0
     },
     {
@@ -778,9 +778,9 @@
     }
   ],
   "student": "by-time",
-  "runId": "36429545640",
+  "runId": "36431096114",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
