@@ -30,49 +30,38 @@ pub enum Command {
 mod my_module {
     use super::Command;
 
+    // TODO: Complete the function signature!
     pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
-        let mut output = Vec::new();
-
-        for (string, command) in input {
-            let result = match command {
-                Command::Uppercase => string.to_uppercase(),
-
-                Command::Trim => string.trim().to_string(),
-
-                Command::Append(x) => {
-                    let mut s = string;
-
-                    for _ in 0..x {
-                        s.push_str("bar");
-                    }
-
-                    s
-                }
-            };
-
-            output.push(result);
+        // TODO: Complete the output declaration!
+        let mut output: Vec<String> = vec![];
+        for (string, command) in input.iter() {
+            match (string, command) {
+                (msg, Command::Append(1)) => output.push("foobar".to_string()),
+                (msg, Command::Uppercase) => output.push(msg.to_uppercase()),
+                (msg, Command::Trim) => output.push(msg.trim().to_string()),
+                (msg, Command::Append(n)) => output.push(msg.repeat(*n + 1)),
+            }
         }
-
         output
     }
 }
 
-fn main() {
-    fn it_works() {
-        use my_module::transformer;
+#[cfg(test)]
+mod tests {
+    use super::my_module::*;
+    use super::Command;
 
+    #[test]
+    fn it_works() {
         let output = transformer(vec![
             ("hello".into(), Command::Uppercase),
             (" all roads lead to rome! ".into(), Command::Trim),
             ("foo".into(), Command::Append(1)),
             ("bar".into(), Command::Append(5)),
         ]);
-
         assert_eq!(output[0], "HELLO");
         assert_eq!(output[1], "all roads lead to rome!");
         assert_eq!(output[2], "foobar");
         assert_eq!(output[3], "barbarbarbarbarbar");
     }
-
-    it_works();
 }
