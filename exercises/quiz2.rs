@@ -59,9 +59,8 @@ mod my_module {
 }
 
 fn main() {
-use my_module::transformer;
-
-        fn it_works() {
+    fn it_works() {
+        use my_module::transformer;
         let output = transformer(vec![
             ("hello".into(), Command::Uppercase),
             (" all roads lead to rome! ".into(), Command::Trim),
