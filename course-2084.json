@@ -2,7 +2,7 @@
   "schema": 1,
   "courseId": 2084,
   "repository": "LearningOS/2026a-rustling-by-time",
-  "commit": "c756426e7ff4183d8ee2070f20b38ff4015363ab",
+  "commit": "e42be10b54be34dd17b0582f3ba8dc3630c7bede",
   "score": 109,
   "totalScore": 110,
   "exercises": [
@@ -778,9 +778,9 @@
     }
   ],
   "student": "by-time",
-  "runId": "36427749537",
+  "runId": "36429545640",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
